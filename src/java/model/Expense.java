@@ -8,6 +8,16 @@ public class Expense {
   private String edate;
   private float amount;
   private String paymentMode;
+  private String categoryName;
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
+  
 
     public Expense() {
     }

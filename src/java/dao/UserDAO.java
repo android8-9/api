@@ -7,6 +7,33 @@ import model.User;
 import service.GetConnection;
 
 public class UserDAO {
+  public static User authenticate(User user){
+      Connection con = null;
+      try{
+          con = GetConnection.getConnection();
+          String sql = "select * from user where mobile = ? and password = ?";
+          PreparedStatement ps = con.prepareStatement(sql);
+          ps.setString(1, user.getMobile());
+          ps.setString(2, user.getPassword());
+          ResultSet rs = ps.executeQuery();
+          if(rs.next()){
+              user.setId(rs.getInt(1));
+          }
+      }
+      
+      catch(Exception e){
+        e.printStackTrace();
+      }
+      finally{
+          try{
+              con.close();
+          }
+          catch(Exception e){
+              e.printStackTrace();
+          }
+      }
+      return user;
+  }  
   public static User save(User u){
       Connection con = null;
       try{

@@ -4,9 +4,41 @@
         <servlet-name>RegisterController</servlet-name>
         <servlet-class>controller.RegisterController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LoginController</servlet-name>
+        <servlet-class>controller.LoginController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CategoryController</servlet-name>
+        <servlet-class>controller.CategoryController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddExpenseController</servlet-name>
+        <servlet-class>controller.AddExpenseController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ExpenseListController</servlet-name>
+        <servlet-class>controller.ExpenseListController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterController</servlet-name>
         <url-pattern>/RegisterController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginController</servlet-name>
+        <url-pattern>/LoginController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CategoryController</servlet-name>
+        <url-pattern>/CategoryController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddExpenseController</servlet-name>
+        <url-pattern>/AddExpenseController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ExpenseListController</servlet-name>
+        <url-pattern>/ExpenseListController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
